@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Employee {
     private String name;
     private int birthYear;
@@ -22,7 +24,12 @@ public class Employee {
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
     }
+    public int getAge() {
+        LocalDate currentDate = LocalDate.now();
+        int currentYear = currentDate.getYear();
+        return currentYear - birthYear;
 
+    }
     public double getOccupationRate() {
         return occupationRate;
     }
