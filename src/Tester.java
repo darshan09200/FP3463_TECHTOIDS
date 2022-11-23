@@ -6,6 +6,10 @@ public class Tester extends Employee {
         this.nbBugs = nbBugs;
     }
 
+    public Tester(String name, int birthYear, int nbBugs) {
+        this(name, birthYear, 100, nbBugs);
+    }
+
     public int getNbBugs() {
         return nbBugs;
     }
