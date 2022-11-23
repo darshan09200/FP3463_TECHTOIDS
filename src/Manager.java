@@ -1,11 +1,16 @@
-public class Manager extends Employee{
+public class Manager extends Employee {
     private int nbTravelDays;
     private int nbClients;
+
 
     public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients) {
         super(name, birthYear, occupationRate, "Manager");
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
+    }
+
+    public Manager(String name, int birthYear, int nbTravelDays, int nbClients) {
+        this(name, birthYear, 100, nbTravelDays, nbClients);
     }
 
     public int getNbTravelDays() {
