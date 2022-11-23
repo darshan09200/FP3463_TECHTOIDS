@@ -1,9 +1,13 @@
-public class Programmer extends Employee{
+public class Programmer extends Employee {
     int nbProjects;
 
     public Programmer(String name, int birthYear, double occupationRate, int nbProjects) {
         super(name, birthYear, occupationRate, "Programmer");
         this.nbProjects = nbProjects;
+    }
+
+    public Programmer(String name, int birthYear, int nbProjects) {
+        this(name, birthYear, 100, nbProjects);
     }
 
     public int getNbProjects() {
