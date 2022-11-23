@@ -10,4 +10,32 @@ public class Employee {
         this.occupationRate = occupationRate;
         this.role = role;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
+    }
+
+    public double getOccupationRate() {
+        return occupationRate;
+    }
+
+    public void setOccupationRate(double occupationRate) {
+        this.occupationRate = occupationRate;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
