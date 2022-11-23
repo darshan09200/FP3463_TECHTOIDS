@@ -9,7 +9,7 @@ public class Employee {
     public Employee(String name, int birthYear, double occupationRate, String role) {
         this.name = name;
         this.birthYear = birthYear;
-        this.occupationRate = occupationRate;
+        this.occupationRate = formatOccupationRate(occupationRate);
         this.role = role;
     }
 
@@ -24,18 +24,23 @@ public class Employee {
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
     }
+
     public int getAge() {
         LocalDate currentDate = LocalDate.now();
         int currentYear = currentDate.getYear();
         return currentYear - birthYear;
-
     }
+
+    static double formatOccupationRate(double occupationRate) {
+        return Math.max(0, Math.min(occupationRate, 100));
+    }
+
     public double getOccupationRate() {
         return occupationRate;
     }
 
     public void setOccupationRate(double occupationRate) {
-        this.occupationRate = occupationRate;
+        this.occupationRate = formatOccupationRate(occupationRate);
     }
 
     public String getRole() {
