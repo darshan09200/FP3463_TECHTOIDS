@@ -1,5 +1,5 @@
 public class Programmer extends Employee {
-    int nbProjects;
+    private int nbProjects;
 
     public Programmer(String name, int birthYear, double occupationRate, int nbProjects) {
         super(name, birthYear, occupationRate, "Programmer");
