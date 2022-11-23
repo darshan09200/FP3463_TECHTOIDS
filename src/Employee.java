@@ -11,6 +11,8 @@ public class Employee {
         this.birthYear = birthYear;
         this.occupationRate = formatOccupationRate(occupationRate);
         this.role = role;
+
+        System.out.println("We have a new employee: " + getName() + ", a " + getRole());
     }
 
     public String getName() {
