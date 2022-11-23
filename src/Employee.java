@@ -52,4 +52,12 @@ public class Employee {
     public void setRole(String role) {
         this.role = role;
     }
+
+    public double getMonthlyIncome() {
+        return 0;
+    }
+
+    public double getAnnualIncome() {
+        return getMonthlyIncome() * 12 * (getOccupationRate() / 100);
+    }
 }
