@@ -67,7 +67,7 @@ public class Permanent implements Contract {
         if (isMarried()) {
             baseSalary += (getBonusPerMonth() * getNoOfChildren());
         }
-        return (getAccumulatedDays()) * baseSalary / Permanent.WORKING_DAYS;
+        return getAccumulatedDays() * baseSalary / Permanent.WORKING_DAYS;
     }
     @Override
     public String toString() {
@@ -76,7 +76,7 @@ public class Permanent implements Contract {
             desc += "not ";
         }
         desc += "married and he / she has " + getNoOfChildren() + " children.\n" +
-                "He / She has worked for " + getAccumulatedDays() + " days and upon contract his / her monthly salary is $" + getCumulativeSalary() + ". ";
+                "He / She has worked for " + getAccumulatedDays() + " days and upon contract his / her monthly salary is $" + getMonthlySalary() + ". ";
         return desc;
     }
 }
