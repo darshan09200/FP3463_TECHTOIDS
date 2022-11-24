@@ -32,6 +32,8 @@ public class Tester extends Employee {
         desc += " and corrected " + getNbBugs() + " bugs.\nHis/Her estimated annual income is $" + getAnnualIncome();
         return desc;
     }
-
+    public double getAnnualIncome() {
+        return super.getAnnualIncome() + (nbBugs * 10g);
+    }
 
 }
