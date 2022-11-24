@@ -15,11 +15,11 @@ public class Manager extends Employee {
     }
 
     public Manager(String name, int birthYear, int nbTravelDays, int nbClients, Vehicle vehicle) {
-        this(name, birthYear, 100, nbTravelDays, nbClients, vehicle);
+        this(name, birthYear, DEFAULT_OCCUPATION_RATE, nbTravelDays, nbClients, vehicle);
     }
 
     public Manager(String name, int birthYear, int nbTravelDays, int nbClients) {
-        this(name, birthYear, 100, nbTravelDays, nbClients, null);
+        this(name, birthYear, DEFAULT_OCCUPATION_RATE, nbTravelDays, nbClients, null);
     }
 
     public int getNbTravelDays() {

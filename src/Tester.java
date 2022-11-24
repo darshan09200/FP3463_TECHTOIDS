@@ -11,11 +11,11 @@ public class Tester extends Employee {
     }
 
     public Tester(String name, int birthYear, int nbBugs, Vehicle vehicle) {
-        this(name, birthYear, 100, nbBugs, vehicle);
+        this(name, birthYear, DEFAULT_OCCUPATION_RATE, nbBugs, vehicle);
     }
 
     public Tester(String name, int birthYear, int nbBugs) {
-        this(name, birthYear, 100, nbBugs, null);
+        this(name, birthYear, DEFAULT_OCCUPATION_RATE, nbBugs, null);
     }
 
 

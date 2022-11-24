@@ -1,7 +1,9 @@
 import java.time.LocalDate;
 
 public class Employee {
-    private String name;
+
+    static final double DEFAULT_OCCUPATION_RATE = 100;
+    private final String name;
     private int birthYear;
     private double occupationRate;
     private String role;

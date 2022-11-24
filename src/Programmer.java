@@ -11,11 +11,11 @@ public class Programmer extends Employee {
     }
 
     public Programmer(String name, int birthYear, int nbProjects, Vehicle vehicle) {
-        this(name, birthYear, 100, nbProjects, vehicle);
+        this(name, birthYear, DEFAULT_OCCUPATION_RATE, nbProjects, vehicle);
     }
 
     public Programmer(String name, int birthYear, int nbProjects) {
-        this(name, birthYear, 100, nbProjects, null);
+        this(name, birthYear, DEFAULT_OCCUPATION_RATE, nbProjects, null);
     }
 
     public int getNbProjects() {
