@@ -25,4 +25,11 @@ public class Programmer extends Employee {
     public void setNbProjects(int nbProjects) {
         this.nbProjects = nbProjects;
     }
+
+    @Override
+    public String toString() {
+        String desc = super.toString();
+        desc += " and completed " + getNbProjects() + " projects.\nHis/Her estimated annual income is $" + getAnnualIncome();
+        return desc;
+    }
 }
