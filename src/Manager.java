@@ -3,14 +3,22 @@ public class Manager extends Employee {
     private int nbClients;
 
 
-    public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients) {
-        super(name, birthYear, occupationRate, "Manager");
+    public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients, Vehicle vehicle) {
+        super(name, birthYear, occupationRate, "Manager", null);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
     }
 
+    public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients) {
+        this(name, birthYear, occupationRate, nbTravelDays, nbClients, null);
+    }
+
+    public Manager(String name, int birthYear, int nbTravelDays, int nbClients, Vehicle vehicle) {
+        this(name, birthYear, 100, nbTravelDays, nbClients, vehicle);
+    }
+
     public Manager(String name, int birthYear, int nbTravelDays, int nbClients) {
-        this(name, birthYear, 100, nbTravelDays, nbClients);
+        this(name, birthYear, 100, nbTravelDays, nbClients, null);
     }
 
     public int getNbTravelDays() {

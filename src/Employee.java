@@ -6,11 +6,14 @@ public class Employee {
     private double occupationRate;
     private String role;
 
-    public Employee(String name, int birthYear, double occupationRate, String role) {
+    private Vehicle vehicle;
+
+    public Employee(String name, int birthYear, double occupationRate, String role, Vehicle vehicle) {
         this.name = name;
         this.birthYear = birthYear;
         this.occupationRate = formatOccupationRate(occupationRate);
         this.role = role;
+        this.vehicle = vehicle;
 
         System.out.println("We have a new employee: " + getName() + ", a " + getRole()+".");
     }

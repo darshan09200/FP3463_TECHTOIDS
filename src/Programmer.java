@@ -2,7 +2,7 @@ public class Programmer extends Employee {
     private int nbProjects;
 
     public Programmer(String name, int birthYear, double occupationRate, int nbProjects) {
-        super(name, birthYear, occupationRate, "Programmer");
+        super(name, birthYear, occupationRate, "Programmer", null);
         this.nbProjects = nbProjects;
     }
 
