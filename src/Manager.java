@@ -39,6 +39,11 @@ public class Manager extends Employee {
     }
 
     @Override
+    public double getAnnualIncome() {
+        return super.getAnnualIncome() + (nbClients * 500) + (nbTravelDays * 100);
+    }
+
+    @Override
     public String toString() {
         String desc = super.toString();
         desc += ". He/She has bought " + nbClients + " new clients.\nHis/Her estimated annual income is $" + getAnnualIncome();
