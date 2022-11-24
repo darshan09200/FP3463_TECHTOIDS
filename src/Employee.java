@@ -66,6 +66,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Name:" + getName() + ",a " + getRole() + "\n" + "Age: " + getAge() + "\n" + getName() + " has an Occupation rate: " + getOccupationRate() + "%";
+        String desc =  "Name:" + getName() + ",a " + getRole() + "\n" + "Age: " + getAge() + "\n" ;
+        if(vehicle != null) {
+            desc += vehicle + "\n";
+        }
+        return desc + getName() + " has an Occupation rate: " + getOccupationRate() + "%";
     }
 }
