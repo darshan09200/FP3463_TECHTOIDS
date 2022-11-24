@@ -8,7 +8,7 @@ public class Employee {
     private double occupationRate;
     private String role;
 
-    private Vehicle vehicle;
+    private final Vehicle vehicle;
 
     Contract contract;
 
@@ -41,7 +41,7 @@ public class Employee {
     }
 
     static double formatOccupationRate(double occupationRate) {
-        return Math.max(0, Math.min(occupationRate, 100));
+        return Math.max(0, Math.min(occupationRate, DEFAULT_OCCUPATION_RATE));
     }
 
     public double getOccupationRate() {
