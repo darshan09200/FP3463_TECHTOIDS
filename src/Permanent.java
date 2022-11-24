@@ -69,4 +69,15 @@ public class Permanent implements Contract {
         }
         return (getAccumulatedDays()) * baseSalary / Permanent.WORKING_DAYS;
     }
+    @Override
+    public String toString() {
+        String desc = " He/She is ";
+        if (!isMarried()) {
+            desc += "not ";
+        }
+        desc += "married and he / she has " + getNoOfChildren() + " children.\n" +
+                "He / She has worked for " + getAccumulatedDays() + " days and upon contract his / her monthly salary is $" + getCumulativeSalary() + ". ";
+        return desc;
+    }
+}
 }
