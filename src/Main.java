@@ -4,5 +4,9 @@ public class Main {
 
         System.out.println("Test 1: ");
         management.testCase1();
+
+        System.out.println("Test 2 : ");
+        System.out.println("Employee Description :- ");
+        management.testCase2();
     }
 }
