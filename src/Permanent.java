@@ -1,0 +1,72 @@
+public class Permanent implements Contract {
+    static double WORKING_DAYS = 20;
+    private int noOfChildren;
+    private boolean married;
+    private double monthlySalary;
+    private double bonusPerMonth;
+    private int accumulatedDays;
+
+    public Permanent(int noOfChildren, boolean married, double monthlySalary, double bonusPerMonth, int accumulatedDays) {
+        this.noOfChildren = noOfChildren;
+        this.married = married;
+        this.monthlySalary = monthlySalary;
+        this.bonusPerMonth = bonusPerMonth;
+        this.accumulatedDays = accumulatedDays;
+    }
+
+    public static double getWorkingDays() {
+        return WORKING_DAYS;
+    }
+
+    public static void setWorkingDays(double workingDays) {
+        WORKING_DAYS = workingDays;
+    }
+
+    public int getNoOfChildren() {
+        return noOfChildren;
+    }
+
+    public void setNoOfChildren(int noOfChildren) {
+        this.noOfChildren = noOfChildren;
+    }
+
+    public boolean isMarried() {
+        return married;
+    }
+
+    public void setMarried(boolean married) {
+        this.married = married;
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public void setMonthlySalary(double monthlySalary) {
+        this.monthlySalary = monthlySalary;
+    }
+
+    public double getBonusPerMonth() {
+        return bonusPerMonth;
+    }
+
+    public void setBonusPerMonth(double bonusPerMonth) {
+        this.bonusPerMonth = bonusPerMonth;
+    }
+
+    public int getAccumulatedDays() {
+        return accumulatedDays;
+    }
+
+    public void setAccumulatedDays(int accumulatedDays) {
+        this.accumulatedDays = accumulatedDays;
+    }
+
+    public double getCumulativeSalary() {
+        double baseSalary = getMonthlySalary();
+        if (isMarried()) {
+            baseSalary += (getBonusPerMonth() * getNoOfChildren());
+        }
+        return (getAccumulatedDays()) * baseSalary / Permanent.WORKING_DAYS;
+    }
+}
