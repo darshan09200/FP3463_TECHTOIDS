@@ -33,7 +33,7 @@ public class Tester extends Employee {
         return desc;
     }
     public double getAnnualIncome() {
-        return super.getAnnualIncome() + (nbBugs * 10g);
+        return super.getAnnualIncome() + (nbBugs * 10);
     }
 
 }

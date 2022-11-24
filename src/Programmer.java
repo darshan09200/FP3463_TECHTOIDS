@@ -26,6 +26,10 @@ public class Programmer extends Employee {
         this.nbProjects = nbProjects;
     }
 
+    public double getAnnualIncome() {
+        return super.getAnnualIncome() + (nbProjects * 200);
+    }
+
     @Override
     public String toString() {
         String desc = super.toString();
