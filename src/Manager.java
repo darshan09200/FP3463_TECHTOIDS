@@ -9,6 +9,7 @@ public class Manager extends Employee {
         this.nbClients = nbClients;
     }
 
+
     public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients) {
         this(name, birthYear, occupationRate, nbTravelDays, nbClients, null);
     }
@@ -36,4 +37,12 @@ public class Manager extends Employee {
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;
     }
+
+    @Override
+    public String toString() {
+        String desc = super.toString();
+        desc += ". He/She has bought " + nbClients + " new clients.\nHis/Her estimated annual income is $" + getAnnualIncome();
+        return desc;
+    }
+
 }
