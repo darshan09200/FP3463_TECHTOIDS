@@ -42,4 +42,8 @@ public class Vehicle {
     public void setCategory(String category) {
         this.category = category;
     }
+    @Override
+    public String toString() {
+        return "\n\t- make: " + getMake() + "\n\t- plate: " + getPlate() + "\n\t- color: " + getColor() + "\n\t- category: " + getCategory() + "\n\t";
+    }
 }

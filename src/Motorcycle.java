@@ -16,15 +16,13 @@ public class Motorcycle extends Vehicle{
 
     @Override
     public String toString() {
-
-        String desc = "Employee has a motorcycle. \n\t- make: " + getMake() +
-                "\n\t- plate: "+ getPlate() + "\n\t- color: " + getColor() + "\n\t- category: " + getCategory();
+        String desc = "Employee has a motorcycle." + super.toString() + "- ";
         if (isSidecar()) {
-            desc += "\n\t- with sidecar";
+            desc += "with";
+        } else {
+            desc += "without";
         }
-        else {
-            desc += "\n\t- without sidecar";
-        }
+        desc += " sidecar";
         return desc;
     }
 }
