@@ -6,13 +6,16 @@ public class Employee {
     private double occupationRate;
     private String role;
 
-    public Employee(String name, int birthYear, double occupationRate, String role) {
+    private Vehicle vehicle;
+
+    public Employee(String name, int birthYear, double occupationRate, String role, Vehicle vehicle) {
         this.name = name;
         this.birthYear = birthYear;
         this.occupationRate = formatOccupationRate(occupationRate);
         this.role = role;
+        this.vehicle = vehicle;
 
-        System.out.println("We have a new employee: " + getName() + ", a " + getRole()+".");
+        System.out.println("We have a new employee: " + getName() + ", a " + getRole() + ".");
     }
 
     public String getName() {
@@ -59,5 +62,14 @@ public class Employee {
 
     public double getAnnualIncome() {
         return getMonthlyIncome() * 12 * (getOccupationRate() / 100);
+    }
+
+    @Override
+    public String toString() {
+        String desc =  "Name:" + getName() + ",a " + getRole() + "\n" + "Age: " + getAge() + "\n" ;
+        if(vehicle != null) {
+            desc += vehicle + "\n";
+        }
+        return desc + getName() + " has an Occupation rate: " + getOccupationRate() + "%";
     }
 }

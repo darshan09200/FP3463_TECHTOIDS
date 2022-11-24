@@ -3,14 +3,23 @@ public class Manager extends Employee {
     private int nbClients;
 
 
-    public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients) {
-        super(name, birthYear, occupationRate, "Manager");
+    public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients, Vehicle vehicle) {
+        super(name, birthYear, occupationRate, "Manager", vehicle);
         this.nbTravelDays = nbTravelDays;
         this.nbClients = nbClients;
     }
 
+
+    public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients) {
+        this(name, birthYear, occupationRate, nbTravelDays, nbClients, null);
+    }
+
+    public Manager(String name, int birthYear, int nbTravelDays, int nbClients, Vehicle vehicle) {
+        this(name, birthYear, 100, nbTravelDays, nbClients, vehicle);
+    }
+
     public Manager(String name, int birthYear, int nbTravelDays, int nbClients) {
-        this(name, birthYear, 100, nbTravelDays, nbClients);
+        this(name, birthYear, 100, nbTravelDays, nbClients, null);
     }
 
     public int getNbTravelDays() {
@@ -28,4 +37,17 @@ public class Manager extends Employee {
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;
     }
+
+    @Override
+    public double getAnnualIncome() {
+        return super.getAnnualIncome() + (nbClients * 500) + (nbTravelDays * 100);
+    }
+
+    @Override
+    public String toString() {
+        String desc = super.toString();
+        desc += ". He/She has bought " + nbClients + " new clients.\nHis/Her estimated annual income is $" + getAnnualIncome();
+        return desc;
+    }
+
 }
