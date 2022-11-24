@@ -26,4 +26,12 @@ public class Tester extends Employee {
     public void setNbBugs(int nbBugs) {
         this.nbBugs = nbBugs;
     }
+
+    public String toString() {
+        String desc = super.toString();
+        desc += " and corrected " + getNbBugs() + " bugs.\nHis/Her estimated annual income is $" + getAnnualIncome();
+        return desc;
+    }
+
+
 }
