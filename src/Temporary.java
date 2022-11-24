@@ -29,4 +29,10 @@ public class Temporary implements Contract {
         return hourlySalary * accumulatedHours;
     }
 
+    @Override
+    public String toString() {
+        return " He/She is a temporary employee with $" + getHourlySalary() +
+                " hourly salary and he has worked for " + getAccumulatedHours() + " hours ";
+    }
+
 }
