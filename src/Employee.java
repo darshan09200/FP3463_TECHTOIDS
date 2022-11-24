@@ -15,7 +15,7 @@ public class Employee {
         this.role = role;
         this.vehicle = vehicle;
 
-        System.out.println("We have a new employee: " + getName() + ", a " + getRole()+".");
+        System.out.println("We have a new employee: " + getName() + ", a " + getRole() + ".");
     }
 
     public String getName() {
@@ -62,5 +62,10 @@ public class Employee {
 
     public double getAnnualIncome() {
         return getMonthlyIncome() * 12 * (getOccupationRate() / 100);
+    }
+
+    @Override
+    public String toString() {
+        return "Name:" + getName() + ",a " + getRole() + "\n" + "Age: " + getAge() + "\n" + getName() + " has an Occupation rate: " + getOccupationRate() + "%";
     }
 }
