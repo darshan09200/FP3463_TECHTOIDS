@@ -8,6 +8,8 @@ public class Employee {
 
     private Vehicle vehicle;
 
+    Contract contract;
+
     public Employee(String name, int birthYear, double occupationRate, String role, Vehicle vehicle) {
         this.name = name;
         this.birthYear = birthYear;
@@ -57,7 +59,11 @@ public class Employee {
     }
 
     public double getMonthlyIncome() {
-        return 0;
+        double monthlySalary = 0;
+        if (contract != null) {
+            monthlySalary = contract.getCumulativeSalary();
+        }
+        return monthlySalary;
     }
 
     public double getAnnualIncome() {
@@ -71,5 +77,15 @@ public class Employee {
             desc += vehicle + "\n";
         }
         return desc + getName() + " has an Occupation rate: " + getOccupationRate() + "%";
+    }
+
+    public void signContract(Contract contract) {
+        this.contract = contract;
+    }
+    public Contract getContract() {
+        return contract;
+    }
+    public String contractInfo() {
+        return getName() + " is a " + getRole().toLowerCase() + ".";
     }
 }

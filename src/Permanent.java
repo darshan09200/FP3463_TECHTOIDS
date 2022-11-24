@@ -80,4 +80,3 @@ public class Permanent implements Contract {
         return desc;
     }
 }
-}
