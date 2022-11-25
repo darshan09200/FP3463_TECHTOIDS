@@ -1,4 +1,5 @@
 public class Programmer extends Employee {
+    static final double GAIN_FACTOR_PROJECTS = 200;
     private int nbProjects;
 
     public Programmer(String name, int birthYear, double occupationRate, int nbProjects, Vehicle vehicle) {
@@ -27,7 +28,7 @@ public class Programmer extends Employee {
     }
 
     public double getAnnualIncome() {
-        return super.getAnnualIncome() + (nbProjects * 200);
+        return super.getAnnualIncome() + (nbProjects * GAIN_FACTOR_PROJECTS);
     }
 
     @Override

@@ -1,7 +1,8 @@
 public class Manager extends Employee {
+    static final double GAIN_FACTOR_TRAVEL = 100;
+    static final double GAIN_FACTOR_CLIENT = 500;
     private int nbTravelDays;
     private int nbClients;
-
 
     public Manager(String name, int birthYear, double occupationRate, int nbTravelDays, int nbClients, Vehicle vehicle) {
         super(name, birthYear, occupationRate, "Manager", vehicle);
@@ -40,7 +41,7 @@ public class Manager extends Employee {
 
     @Override
     public double getAnnualIncome() {
-        return super.getAnnualIncome() + (nbClients * 500) + (nbTravelDays * 100);
+        return super.getAnnualIncome() + (nbClients * GAIN_FACTOR_CLIENT) + (nbTravelDays * GAIN_FACTOR_TRAVEL);
     }
 
     @Override

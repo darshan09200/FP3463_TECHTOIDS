@@ -1,4 +1,5 @@
 public class Tester extends Employee {
+    static final double GAIN_FACTOR_ERROR = 10;
     private int nbBugs;
 
     public Tester(String name, int birthYear, double occupationRate, int nbBugs, Vehicle vehicle) {
@@ -33,7 +34,7 @@ public class Tester extends Employee {
         return desc;
     }
     public double getAnnualIncome() {
-        return super.getAnnualIncome() + (nbBugs * 10);
+        return super.getAnnualIncome() + (nbBugs * GAIN_FACTOR_ERROR);
     }
 
 }

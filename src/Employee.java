@@ -1,7 +1,6 @@
 import java.time.LocalDate;
 
-public class Employee {
-
+public abstract class Employee {
     static final double DEFAULT_OCCUPATION_RATE = 100;
     private final String name;
     private int birthYear;

@@ -1,4 +1,4 @@
-public class Motorcycle extends Vehicle{
+public class Motorcycle extends Vehicle {
     private boolean sidecar;
 
     public Motorcycle(String make, String plate, String color, String category, boolean sidecar) {
@@ -16,13 +16,6 @@ public class Motorcycle extends Vehicle{
 
     @Override
     public String toString() {
-        String desc = "Employee has a motorcycle." + super.toString() + "- ";
-        if (isSidecar()) {
-            desc += "with";
-        } else {
-            desc += "without";
-        }
-        desc += " sidecar";
-        return desc;
+        return "Employee has a motorcycle." + super.toString() + "- " + (isSidecar() ? "with" : "without") + " sidecar";
     }
 }

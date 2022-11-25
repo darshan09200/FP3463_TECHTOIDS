@@ -14,14 +14,6 @@ public class Permanent implements Contract {
         this.accumulatedDays = accumulatedDays;
     }
 
-    public static double getWorkingDays() {
-        return WORKING_DAYS;
-    }
-
-    public static void setWorkingDays(double workingDays) {
-        WORKING_DAYS = workingDays;
-    }
-
     public int getNoOfChildren() {
         return noOfChildren;
     }
